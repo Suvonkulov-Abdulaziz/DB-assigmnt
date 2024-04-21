@@ -1,0 +1,7 @@
+<svg id="Tag_Large_Icon" data-name="Tag/Large/Icon" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <circle id="Background" cx="22" cy="22" r="22" fill="#ff642f"/>
+  <g id="feather-icon_arrow-right" data-name="feather-icon/arrow-right" transform="translate(11 11)">
+    <rect id="Bounding_Box" data-name="Bounding Box" width="22" height="22" fill="rgba(255,255,255,0)"/>
+    <path id="Shape" d="M10.5,2.069l.323-.323a5.96,5.96,0,1,1,8.428,8.428l-8.1,8.1a.917.917,0,0,1-1.3,0l-8.1-8.1a5.96,5.96,0,0,1,8.428-8.428Z" transform="translate(0.503 1.832)" fill="#fff"/>
+  </g>
+</svg>
