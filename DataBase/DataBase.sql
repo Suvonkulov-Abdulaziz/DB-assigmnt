@@ -4,5 +4,5 @@ CREATE TABLE Recipe (
     Description TEXT,
     Instructions TEXT,
     Source VARCHAR(255)
-    -- Add other attributes as needed
+
 );
