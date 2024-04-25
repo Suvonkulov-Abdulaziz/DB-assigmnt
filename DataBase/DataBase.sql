@@ -82,6 +82,7 @@ CREATE TABLE Note (
     FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
 );
 
+CREATE
 
 
 
