@@ -11,7 +11,6 @@ CREATE TABLE SocialMediaAccount (
     Platform VARCHAR(50),
     AccountName VARCHAR(255),
     AccessToken VARCHAR(255),
-
     FOREIGN KEY (UserID) REFERENCES "User"(UserID)
 );
 
@@ -19,8 +18,7 @@ CREATE TABLE Recipe (
     RecipeID INT PRIMARY KEY,
     Title VARCHAR(255),
     Description TEXT,
-    Instructions TEXT,
-    Source VARCHAR(255)
+    Instructions TEXT
 );
 
 CREATE TABLE Ingredient (
@@ -84,22 +82,6 @@ CREATE TABLE Note (
     FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
 );
 
--- Table: ShoppingList
-CREATE TABLE ShoppingList (
-    ListID INT PRIMARY KEY,
-    UserID INT,
-    Name VARCHAR(255),
-    Description TEXT,
-    FOREIGN KEY (UserID) REFERENCES "User"(UserID)
-);
 
--- Table: ListItem
-CREATE TABLE ListItem (
-    ItemID INT PRIMARY KEY,
-    ListID INT,
-    IngredientID INT,
-    Quantity DECIMAL(10, 2),
-    Checked BOOLEAN,
-    FOREIGN KEY (ListID) REFERENCES ShoppingList(ListID),
-    FOREIGN KEY (IngredientID) REFERENCES Ingredient(IngredientID)
-);
+
+
