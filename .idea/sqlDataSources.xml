@@ -10,20 +10,4 @@
       </scope>
     </mapping>
   </component>
-  <component name="SqlDataSourceStorage">
-    <option name="dataSources">
-      <list>
-        <State>
-          <option name="id" value="e3cc5cf4-1efb-46a8-bef7-b132f21ff233" />
-          <option name="name" value="postgres@localhost (DDL)" />
-          <option name="dbmsName" value="POSTGRES" />
-          <option name="parent" value="67943e77-8e0f-4c75-b8e9-89d91600ac0e" />
-          <option name="urls">
-            <array />
-          </option>
-          <option name="outLayout" value="File per object by schema.groovy" />
-        </State>
-      </list>
-    </option>
-  </component>
 </project>
