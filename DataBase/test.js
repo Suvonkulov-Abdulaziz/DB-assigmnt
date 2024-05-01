@@ -36,3 +36,30 @@ client.query(query)
     // Close the PostgreSQL client when done
     client.end();
   });
+
+  $(document).ready(function() {
+    let offset = 0;
+
+    function loadMoreContent() {
+        $.ajax({
+            url: '/load-more',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ offset: offset }),
+            success: function(response) {
+                response.forEach(item => {
+                    // Append the fetched content to the container
+                    $('#content-container').append(`<div class="content-item"><img src="${item.image}"><p>${item.text}</p></div>`);
+                });
+                offset += response.length;
+            },
+            error: function() {
+                console.log('Error fetching data from server');
+            }
+        });
+    }
+
+    $('#load-more-btn').click(function() {
+        loadMoreContent();
+    });
+});
