@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+    .card {
+      width: 400px;
+    }
+    .btn-colorful {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #fff;
+    }
+    .btn-colorful:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-body">
+    <h3 class="text-center mb-4">Login</h3>
+    <form>
+      <div class="form-group">
+        <label for="loginEmail">Email address</label>
+        <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-colorful btn-block">Login</button>
+    </form>
+    <div class="text-center mt-3">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h3 class="text-center mb-4">Register</h3>
+    <form>
+      <div class="form-group">
+        <label for="registerName">Full Name</label>
+        <input type="text" class="form-control" id="registerName" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="registerEmail">Email address</label>
+        <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Password</label>
+        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-colorful btn-block">Register</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
