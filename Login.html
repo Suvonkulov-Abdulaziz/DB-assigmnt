@@ -29,6 +29,14 @@
             background-color: #0056b3;
             border-color: #0056b3;
         }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+            display: none; /* Initially hide the error message */
+        }
     </style>
 </head>
 
@@ -46,23 +54,20 @@
                     <label for="loginPassword">Password</label>
                     <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                 </div>
-<<<<<<< HEAD
-                <button type="submit" class="btn btn-colorful btn-block">Login</button>
+                <a href="Home.html" class="btn btn-colorful btn-block">Login</a>
                 <a href="Register.html" class="btn btn-colorful btn-block">Register</a>
-=======
-                <a href="Home.html">
-                    <button type="submit" class="btn btn-colorful btn-block" >Login</button>
-                </a>
->>>>>>> 6d68a44 (fds)
             </form>
             <div class="text-center mt-3">
                 <a href="#">Forgot password?</a>
             </div>
+            <div class="error-message" id="errorMessage"></div> <!-- Error message container -->
         </div>
     </div>
 
-    
-    <script src="javascript/frontend.js"></script>
+    <script>
+        
+    </script>
+
 </body>
 
 </html>
