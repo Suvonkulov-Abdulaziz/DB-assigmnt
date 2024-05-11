@@ -5,38 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Register</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-        }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+  }
 
-        .card {
-            width: 400px;
-        }
-
-        .btn-colorful {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-        }
-
-        .btn-colorful:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
-            text-align: center;
-            display: none; /* Initially hide the error message */
-        }
+  .card {
+      width: 400px;
+  }
     </style>
 </head>
 
@@ -48,25 +31,23 @@
             <form id="loginForm">
                 <div class="form-group">
                     <label for="loginEmail">Email address</label>
-                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
                 </div>
                 <div class="form-group">
                     <label for="loginPassword">Password</label>
-                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                 </div>
-                <a href="Home.html" class="btn btn-colorful btn-block">Login</a>
+                <button type="submit" class="btn btn-colorful btn-block" id="loginButton">Login</button>
                 <a href="Register.html" class="btn btn-colorful btn-block">Register</a>
             </form>
             <div class="text-center mt-3">
                 <a href="#">Forgot password?</a>
             </div>
-            <div class="error-message" id="errorMessage"></div> <!-- Error message container -->
+            <div class="error-message" id="errorMessage">ffds</div> <!-- Error message container -->
         </div>
     </div>
 
-    <script>
-        
-    </script>
+    <script src="javascript/frontend.js"></script>
 
 </body>
 

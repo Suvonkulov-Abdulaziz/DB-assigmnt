@@ -6,35 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Register</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-        }
-
-        .card {
-            width: 400px;
-        }
-
-        .btn-colorful {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-        }
-
-        .btn-colorful:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-    </style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+    }
+  
+    .card {
+        width: 400px;
+    }</style>
 </head>
 
 <body>
-
-    
 
     <div class="card mt-4">
         <div class="card-body">
@@ -52,10 +39,12 @@
                     <label for="registerPassword">Password</label>
                     <input type="password" class="form-control" id="registerPassword" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-colorful btn-block" id="registerButton">Register</button>
+                <button type="submit" class="btn btn-colorful btn-block mb-3 mt-3" id="registerButton">Register</button>
+                <div class="error-message" id="errorMessage"></div> <!-- Error message container -->
             </form>
         </div>
     </div>
+
     <script src="javascript/frontend.js"></script>
 </body>
 

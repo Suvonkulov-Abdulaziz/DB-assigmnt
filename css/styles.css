@@ -2316,7 +2316,7 @@ progress {
 
 .btn-primary {
   color: #000;
-  background-color: #ff642b;
+  background-color: #ff642b; 
   border-color: #ff642b; }
   .btn-primary:hover {
     color: #000;
@@ -7998,65 +7998,8 @@ progress {
 
   .d-print-none {
     display: none !important; } }
-/*
-	1. Tastebite Normal CSS
-	2. Tastebite Components CSS
-		 2. 1. Tastebite Colors CSS
-				2. 1. 1. Tastebite Selection Color CSS
-				2. 1. 2. Tastebite Default Hover Colors CSS
-        2. 1. 3. Tastebite Default Backgrounds CSS
-				2. 1. 4. Tastebite Default Borders CSS
-				2. 1. 5. Tastebite Outline Shades CSS
-				2. 1. 6. Tastebite Background Shades CSS
-        2. 1. 7. Tastebite Border Transparency CSS
-        2. 1. 8. Tastebite Color Transparency CSS
-        2. 1. 9. Tastebite Gradient Background Transparency CSS
-				2. 1. 10. Tastebite Text Underline Color CSS
-        2. 1. 11. Tastebite Background Transparency CSS
-		 2. 2. Tastebite Font Family CSS
-		 2. 3. Tastebite Font Weights CSS
-		 2. 4. Tastebite Font Sizes CSS
-     2. 5. Tastebite Outline Buttons CSS
-     2. 6. Tastebite Rounded CSS
-     2. 7. Tastebite Shadow CSS
-     2. 8. Tastebite Component List CSS
-     2. 9. Tastebite Group List CSS
-     2. 10. Tastebite Information List CSS
-     2. 11. Tastebite Input CSS
-     2. 12. Tastebite Badge CSS
-     2. 13. Tastebite Dropdown CSS
-     2. 14. Tastebite Select Box CSS
-     2. 15. Tastebite Modals CSS
-     2. 16. Fabrx Star Ratings CSS
-     2. 17. Fabrx Icons CSS
-     2. 18. Tastebite Masonry CSS
-     2. 19. Tastebite Media List CSS
-  3. Tastebite Home Page CSS
-     3. 1. Tastebite Header CSS
-     3. 2. Tastebite Navbar CSS
-     3. 3. Tastebite Footer CSS
-     3. 4. Tastebite Instagram List CSS
-     3. 5. Tastebite Social CSS
-     3. 6. Tastebite Join Section CSS
-     3. 7. Tastebite Image Animation CSS
-     3. 8. Tastebite Card CSS
-     3. 9. Tastebite Overlay CSS
-     3. 10. Tastebite Swiper Slider CSS
-  4. Tastebite Search Page CSS
-  5. Tastebite Blog Page CSS
-     5. 1. Tastebite Media CSS
-  6. Tastebite Recipe Page CSS
-     6. 1. Tastebite Component List Page CSS
-     6. 2. Tastebite Custom Control CSS
-     6. 3. Tastebite Instruction List CSS
-  7. Tastebite Category Page CSS
-  8. Tastebite About Page CSS
-     8. 1. Tastebite Team CSS
-  9. Tastebite Documentation Page CSS
-     9. 1. Tastebite Docs Content CSS
-  10. Tastebite Templates Page CSS
-*/
-/* 1. Tastebite Normal CSS */
+
+
 body {
   background: #D8D8D8;
   font-weight: 400;
@@ -10000,5 +9943,26 @@ hr {
   .circle-xl {
     width: 130px;
     height: 130px; } }
+
+    
+
+  .btn-colorful {
+      background-color: #ff895e;
+      border-color: #ff895e;
+      color: #fff;
+  }
+
+  .btn-colorful:hover {
+      background-color: #fb8053;
+      border-color: #fb8053;
+  }
+
+  .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      display: none; /* Initially hide the error message */
+  }
 
 /*# sourceMappingURL=tastebite-styles.css.map */
