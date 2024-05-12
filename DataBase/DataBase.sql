@@ -18,7 +18,8 @@ CREATE TABLE Recipe (
     RecipeID INT PRIMARY KEY,
     Title VARCHAR(255),
     Description TEXT,
-    Instructions TEXT
+    Instructions TEXT,
+    Source VARCHAR(255)
 );
 
 CREATE TABLE Ingredient (
@@ -84,7 +85,7 @@ CREATE TABLE Note (
 
 INSERT INTO Recipe (RecipeID, Title, Description, Instructions, Source) VALUES
     (1, 'Chicken Alfredo', 'Creamy chicken alfredo pasta', '1. Cook pasta according to package instructions. 2. In a large skillet, cook chicken until no longer pink. 3. Add Alfredo sauce and cooked pasta to the skillet. 4. Serve hot.', 'Food Network'),
-    (2, 'Chocolate Cake', 'Moist and delicious chocolate cake', '1. Preheat oven to 350°F. 2. Mix flour, sugar, and cocoa powder in a bowl. 3. Add eggs, milk, and oil. 4. Pour into greased cake pan. 5. Bake for 30 minutes.', 'Allrecipes');
-    
+    (2, 'Chocolate Cake', 'Moist and delicious chocolate cake', '1. Preheat oven to 350°F. 2. Mix flour, sugar, and cocoa powder in a bowl. 3. Add eggs, milk, and oil. 4. Pour into greased cake pan. 5. Bake for 30 minutes.', 'Allrecipes'),
+    (3, 'name', 'null', 'null' , ''),
 
 
