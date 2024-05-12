@@ -72,10 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                // Login successful, dynamically change the login link
-                window.location.href = '../Home-with-avatar.html';
+                // Login successful
                 const loginLink = document.getElementById('loginLink');
-                console.log('1232321')
                 if (loginLink) {
                     loginLink.href = '../Profile.html';
                     loginLink.textContent = ''; // Clear any existing text content
@@ -84,13 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.alt = 'Avatar';
                     img.className = 'ml-4 ml-md-4 mr-2 mr-md-0 circle'; // Add the classes to the image
                     loginLink.appendChild(img);
-                    console.log('1232321')
+                    loginLink.style.display = 'inline'; // Display the login link with the avatar image
                 } else {
                     console.error('Login link not found');
                 }
 
                 // Redirect to the home page
-                 // Change 'Home.html' to the actual home page URL
+                window.location.href = '../Home.html';
             } else {
                 // Login failed, display error message
                 errorMessage.textContent = data.message || 'An error occurred while processing your request.';

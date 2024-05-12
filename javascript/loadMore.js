@@ -1,28 +1,20 @@
-let recipeData = []; // Global variable to store fetched recipe data
-let recipeIndex = 0; // Index to track the current position in the recipe list
+let recipeIndex = 0; // Initialize recipe index
 
-async function fetchData() {
-    const options = {
-        method: 'GET',
-        url: 'https://all-in-one-recipe-api.p.rapidapi.com/random',
-        headers: {
-            'X-RapidAPI-Key': 'f3250fdfd4msh022a441e8f8056ep1961efjsnbd16fe3c1bcb',
-            'X-RapidAPI-Host': 'all-in-one-recipe-api.p.rapidapi.com'
-        }
-    };
-
+async function fetchAndDisplayRecipes() {
     try {
-        const response = await axios.request(options);
-        return response.data; // Return the fetched data
+        const response = await fetch('http://localhost:3000/recipe');
+        const recipeData = await response.json();
+        displayRecipes(recipeData);
     } catch (error) {
-        console.error(error);
-        return null; // Return null if there's an error
+        console.error('Error fetching recipes:', error);
     }
 }
 
-async function displayRecipes() {
+function displayRecipes(recipes) {
     const recipeListElement = document.getElementById('recipeList');
-    const recipesToShow = recipeData.slice(recipeIndex, recipeIndex + 8); // Show 8 recipes at a time
+
+    // Show 4 recipes at a time, starting from the current recipe index
+    const recipesToShow = recipes.slice(recipeIndex, recipeIndex + 4);
 
     recipesToShow.forEach(recipe => {
         const colDiv = document.createElement('div');
@@ -30,7 +22,7 @@ async function displayRecipes() {
         colDiv.innerHTML = `
             <figure class="my-3 my-md-4 tstbite-card">
                 <a href="recipe-sidebar.html" class="tstbite-animation stretched-link rounded-6">
-                    <img src="${recipe.image}" class="w-100" alt="${recipe.title}">
+                    <img src="${recipe.source}" style="width: 250px; height: 250px;" alt="${recipe.title}">
                 </a>
                 <figcaption class="mt-2">
                     <a href="recipe-sidebar.html" class="text-black d-block mt-1 font-weight-semibold big">${recipe.title}</a>
@@ -40,31 +32,15 @@ async function displayRecipes() {
         recipeListElement.appendChild(colDiv);
     });
 
-    recipeIndex += 8; // Increment index for the next set of recipes
-}
+    recipeIndex += 4; // Increment index for the next set of recipes
 
-async function loadMoreRecipes() {
-    await fetchMoreRecipes();
-    displayRecipes();
-}
-
-async function fetchMoreRecipes() {
-    const moreRecipes = await fetchData();
-    if (moreRecipes && moreRecipes.length > 0) {
-        recipeData = [...recipeData, ...moreRecipes]; // Append new recipes to the existing list
+    // Hide the "Load More" button if all recipes have been loaded
+    if (recipeIndex >= recipes.length) {
+        document.getElementById('loadMoreBtn').style.display = 'none';
     }
 }
 
-async function initialize() {
-    recipeData = await fetchData();
-    if (recipeData && recipeData.length > 0) {
-        displayRecipes();
-    } else {
-        const recipeNameElement = document.getElementById('recipeName');
-        recipeNameElement.textContent = 'Error fetching recipes';
-    }
-}
+document.getElementById('loadMoreBtn').addEventListener('click', fetchAndDisplayRecipes);
 
-initialize();
-
-document.getElementById('loadMoreBtn').addEventListener('click', loadMoreRecipes);
+// Initial load of recipes
+fetchAndDisplayRecipes();
