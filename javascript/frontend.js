@@ -72,8 +72,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                // Login successful, redirect to the home page
-                window.location.href = '../Home.html'; // Change 'Home.html' to the actual home page URL
+                // Login successful, dynamically change the login link
+                window.location.href = '../Home-with-avatar.html';
+                const loginLink = document.getElementById('loginLink');
+                console.log('1232321')
+                if (loginLink) {
+                    loginLink.href = '../Profile.html';
+                    loginLink.textContent = ''; // Clear any existing text content
+                    const img = document.createElement('img');
+                    img.src = './img/avatar1.png';
+                    img.alt = 'Avatar';
+                    img.className = 'ml-4 ml-md-4 mr-2 mr-md-0 circle'; // Add the classes to the image
+                    loginLink.appendChild(img);
+                    console.log('1232321')
+                } else {
+                    console.error('Login link not found');
+                }
+
+                // Redirect to the home page
+                 // Change 'Home.html' to the actual home page URL
             } else {
                 // Login failed, display error message
                 errorMessage.textContent = data.message || 'An error occurred while processing your request.';
@@ -86,3 +103,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
