@@ -86,7 +86,7 @@ CREATE TABLE Note (
 INSERT INTO Recipe (RecipeID, Title, Description, Instructions, Source) VALUES
     (1, 'Chicken Alfredo', 'Creamy chicken alfredo pasta', '1. Cook pasta according to package instructions. 2. In a large skillet, cook chicken until no longer pink. 3. Add Alfredo sauce and cooked pasta to the skillet. 4. Serve hot.', 'Food Network'),
     (2, 'Chocolate Cake', 'Moist and delicious chocolate cake', '1. Preheat oven to 350°F. 2. Mix flour, sugar, and cocoa powder in a bowl. 3. Add eggs, milk, and oil. 4. Pour into greased cake pan. 5. Bake for 30 minutes.', 'Allrecipes'),
-    (3, 'name', 'null', 'null' , ''),
+    (3, 'Uzbel Plov', 'null', 'null' , 'https://uzbekistan.travel/storage/app/uploads/public/5e5/f6f/95e/thumb_187_600_480_0_0_auto.png'),
     (4,'Chicken Katsu', 'null', 'null', 'https://www.allrecipes.com/thmb/OgvuciU0zIZ85IIpNESMBrkTw5Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2322570-Chicken-Katsu-Photo-by-Snacking-in-the-Kitchen-650x465-9d37c8112e294d87ae5400188346d9d7.jpg'),
     (5, 'Sandys Chicken Saltimbocca','null', 'null', 'https://www.allrecipes.com/thmb/R68xmC9E79IUahoPB-zmFmZwGXU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/image-1c8f40da9b0c488f8e52944c725ceb4e.jpg'),
     (6, 'Chicken Marsala', 'null', 'null', 'https://www.allrecipes.com/thmb/Xol_WbZvlzExJGqeeAcr_fxb6HA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Chicken-Marsala-2000-e7ceaf7f8d79422084f54260530638bb.jpeg'),
