@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 // Registration successful, redirect to the home page
-                window.location.href = 'Home.html';
+                window.location.href = 'Login.html';
             } else {
                 // Registration failed, display error message
                 const data = await response.json();
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Redirect to the home page
-                window.location.href = '../Home.html';
+                window.location.href = '../Home-with-avatar.html';
             } else {
                 // Login failed, display error message
                 errorMessage.textContent = data.message || 'An error occurred while processing your request.';
